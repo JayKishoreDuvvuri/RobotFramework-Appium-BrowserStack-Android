@@ -10,5 +10,3 @@ ${SETTINGS_LABEL}                      xpath=(//android.widget.TextView[@resourc
 ${LANGUAGES_LABEL}                     xpath=//android.widget.TextView[@text='Languages']
 ${SIGN_OUT_BUTTON}                     xpath=//android.widget.TextView[@text='Sign out']
 ${SIGN_OUT_ON_POPUP}                   xpath=//android.widget.TextView[@text='SIGN OUT']
-
-

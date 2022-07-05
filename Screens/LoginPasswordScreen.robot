@@ -24,4 +24,3 @@ LoginPasswordScreen.WaitAndClickContinueButton
     Wait Until Page Contains Element              ${CONTINUE_BUTTON}
     Element Should Be Enabled                     ${CONTINUE_BUTTON}
     Click Element                                 ${CONTINUE_BUTTON}
-

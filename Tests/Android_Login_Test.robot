@@ -54,4 +54,3 @@ User Logs in and Logs out from the App
      ProfileScreen.ScrollToElement
      ProfileScreen.WaitAndClickSignOutButton
      LandingScreen.TitleAndMessageVisible
-
