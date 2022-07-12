@@ -3,20 +3,20 @@ Library                BuiltIn
 Resource               ../Helpers/TestSetupHelper.robot
 
 *** Variables ***
-${APPIUM_PORT}         4723
-${PLATFORM_NAME}       Android
-${PLATFORM_VERSION}    11
-${APP}                 ${EXECDIR}/Apk/TED.apk
-${APP_PACKAGE}         com.ted.android
-${APP_ACTIVITY}        com.ted.android.MainActivity
-${TIMEOUT}             20
+${BROWSERSTACK_USERNAME}              jaykishoreduvvur_pnsG3S
+${BROWSERSTACK_ACCESS_KEY}            ccqeMmANQ2ikmYsxkTjN
+${BROWSERSTACK_APP_ID}                bs://8ec18a0a1f134e7edaebfb7755de17bb082471bd
+${PLATFORM_NAME}                      Android
+${OS_VERSION}                         12.0
+${DEVICE}                             Samsung Galaxy S22
+${TIMEOUT}                            20
 
 
 *** Keywords ***
 
 BeforeTest
-    Launch App   ${APPIUM_PORT}    ${PLATFORM_NAME}    ${PLATFORM_VERSION}
-    ...          ${APP}   ${APP_PACKAGE}    ${APP_ACTIVITY}   ${TIMEOUT}
+    Launch App  ${BROWSERSTACK_USERNAME}   ${BROWSERSTACK_ACCESS_KEY}   ${BROWSERSTACK_APP_ID}
+    ...         ${PLATFORM_NAME}   ${OS_VERSION}   ${DEVICE}  ${TIMEOUT}
 
 AfterTest
     Close App

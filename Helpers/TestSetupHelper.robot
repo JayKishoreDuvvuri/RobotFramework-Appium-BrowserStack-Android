@@ -5,12 +5,11 @@ Library                 Process
 
 *** Keywords ***
 Launch App
-    [Arguments]  ${APPIUM_PORT}    ${PLATFORM_NAME}   ${PLATFORM_VERSION}  ${APP}   ${APP_PACKAGE}    ${APP_ACTIVITY}   ${TIMEOUT}
+    [Arguments]  ${BROWSERSTACK_USERNAME}   ${BROWSERSTACK_ACCESS_KEY}   ${BROWSERSTACK_APP_ID}  ${PLATFORM_NAME}   ${OS_VERSION}  ${DEVICE}  ${TIMEOUT}
     Set Appium Timeout    ${TIMEOUT}
-    Open Application  http://127.0.0.1:${APPIUM_PORT}/wd/hub
-  ...    platformName=${PLATFORM_NAME}     platformVersion=${PLATFORM_VERSION}
-  ...    app=${APP}    appPackage= ${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
-
+    Open Application  http://${BROWSERSTACK_USERNAME}:${BROWSERSTACK_ACCESS_KEY}@hub-cloud.browserstack.com/wd/hub     app=${BROWSERSTACK_APP_ID}
+    ...   name=TED_Android_Login&Logout_Test_SamsungGalaxyS22   build=RobotFramework_Appium_Android_SamsungGalaxyS22
+    ...   platformName=${PLATFORM_NAME}   os_version=${OS_VERSION}   device=${DEVICE}
 
 Close App
     Close Application
